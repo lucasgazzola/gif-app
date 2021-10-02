@@ -6,15 +6,15 @@ function App () {
   return (
     <div className='App'>
       <section className='App-content'>
-        <h1>App</h1>
-        <Link to='/gif/riquelme'>JRR10</Link>
-        <Link to='/gif/leo messi'>LM10</Link>
-        <Link to='/gif/boca juniors'>Boca</Link>
-        <Link to='/gif/argentina'>Argentina</Link>
-        <Link to='/gif/futbol'>Futbol</Link>
+        <Link to='/'><h1 style={{ cursor: 'pointer' }}>App</h1></Link>
+        <Link to='/search/riquelme'>JRR10</Link>
+        <Link to='/search/leo messi'>LM10</Link>
+        <Link to='/search/boca juniors'>Boca</Link>
+        <Link to='/search/argentina'>Argentina</Link>
+        <Link to='/search/futbol'>Futbol</Link>
         <Route
           component={ListOfGifs}
-          path='/gif/:keyword'
+          path='/search/:keyword'
         />
       </section>
     </div>
