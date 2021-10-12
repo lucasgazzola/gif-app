@@ -1,6 +1,6 @@
 import './App.css'
-import ListOfGifs from './components/ListOfGifs'
-import GifDetail from './components/GifDetail'
+import SearchResults from './pages/SearchResults'
+import Detail from './pages/Detail'
 import NavBar from './components/NavBar'
 import { Route } from 'wouter'
 
@@ -11,11 +11,11 @@ function App () {
         <NavBar />
         <section className='Gif-container'>
           <Route
-            component={ListOfGifs}
+            component={SearchResults}
             path='/search/:keyword'
           />
           <Route
-            component={GifDetail}
+            component={Detail}
             path='/gif/:id'
           />
         </section>
