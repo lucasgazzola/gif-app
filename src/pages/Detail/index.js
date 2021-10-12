@@ -1,4 +1,4 @@
-export default function GifDetail ({ params }) {
+export default function Detail ({ params }) {
   const { id } = params
   return (
     <div>
