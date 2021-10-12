@@ -1,0 +1,45 @@
+:root{
+  --columns-quantity: 1
+}
+
+.ListOfGifs{
+  column-count: var(--columns-quantity);
+  column-gap: .5em;
+  height: auto;
+}
+
+.ListOfGifs-item{
+  -webkit-column-break: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5em;
+  object-fit: cover;
+}
+
+.ListOfGifs-item small {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;  
+}
+@media (min-width: 400px) {
+  :root{
+    --columns-quantity: 2
+  }
+}
+@media (min-width: 600px) {
+  :root{
+    --columns-quantity: 3
+  }
+}
+@media (min-width: 900px) {
+  :root{
+    --columns-quantity: 4
+  }
+}
+
+
