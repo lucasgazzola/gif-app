@@ -16,6 +16,7 @@ export default function Browser () {
   return (
     <form onSubmit={handleSubmit}>
       <input placeholder='Search gif...' value={keyword} type='text' onChange={handleChange} />
+      <button className='submit'>Buscar</button>
     </form>
   )
 }
