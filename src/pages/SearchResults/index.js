@@ -7,7 +7,7 @@ export default function SearchResults ({ params }) {
 
   return (
     loading
-      ? <h2>Loading...</h2>
+      ? <h3 style={{ display: 'inline-block' }}>Loading...</h3>
       : <ListOfGifs gifs={gifs} />
   )
 }
