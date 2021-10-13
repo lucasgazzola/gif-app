@@ -5,7 +5,6 @@
 .ListOfGifs{
   column-count: var(--columns-quantity);
   column-gap: .5em;
-  height: auto;
 }
 
 .ListOfGifs-item{
@@ -16,8 +15,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: .5em;
   object-fit: cover;
+  margin-bottom: .5em;
 }
 
 .ListOfGifs-item small {
