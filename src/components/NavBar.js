@@ -6,11 +6,9 @@ export default function NavBar () {
     <div className='Nav-container'>
       <Link to='/'><h1 style={{ cursor: 'pointer' }}>App</h1></Link>
       <Browser />
-      <Link to='/search/riquelme'>JRR10</Link>
-      <Link to='/search/leo messi'>LM10</Link>
-      <Link to='/search/boca juniors'>Boca</Link>
-      <Link to='/search/argentina'>Argentina</Link>
-      <Link to='/search/futbol'>Futbol</Link>
+      <Link to='/search/simpsons'>Simpsons</Link>
+      <Link to='/search/fun'>Fun</Link>
+      <Link to='/search/memes'>Memes</Link>
     </div>
   )
 }
