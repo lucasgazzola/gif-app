@@ -1,6 +1,6 @@
 import { API_KEY } from './settings'
 
-export default function getGifs ({ keyword = 'random' } = {}) {
+export default function getTrendingTerms ({ keyword = 'random' } = {}) {
   const API_URL = `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${keyword}&limit=30&offset=0&rating=g&lang=en`
   return fetch(API_URL)
     .then(data => data.json())
