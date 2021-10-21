@@ -9,8 +9,10 @@ export default function Detail ({ params }) {
     singleGif.id === params.id
   )
 
-  return <>
-      <h3 className="App-title">{gif.title}</h3>
+  return (
+    <>
+      <h3 className='App-title'>{gif.title}</h3>
       <Gif {...gif} />
     </>
+  )
 }

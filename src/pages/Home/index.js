@@ -1,13 +1,13 @@
-import React, {useState} from "react"
-import { useLocation } from "wouter"
+import React, { useState } from 'react'
+import { useLocation } from 'wouter'
 import ListOfGifs from 'components/ListOfGifs'
-import {useGifs} from 'hooks/useGifs'
+import { useGifs } from 'hooks/useGifs'
 import TrendingSearches from 'components/TrendingSearches'
 
-export default function Home() {
+export default function Home () {
   const [keyword, setKeyword] = useState('')
   const [path, pushLocation] = useLocation()
-  const {loading, gifs} = useGifs()
+  const { loading, gifs } = useGifs()
 
   const handleSubmit = evt => {
     evt.preventDefault()
@@ -23,14 +23,14 @@ export default function Home() {
     <>
       <form onSubmit={handleSubmit}>
         <button>Buscar</button>
-        <input placeholder="Search a gif here..." onChange={handleChange} type='text' value={keyword} />
+        <input placeholder='Search a gif here...' onChange={handleChange} type='text' value={keyword} />
       </form>
-      <div className="App-main">
-        <div className="App-results">
-          <h3 className="App-title">Última búsqueda</h3>
+      <div className='App-main'>
+        <div className='App-results'>
+          <h3 className='App-title'>Última búsqueda</h3>
           <ListOfGifs gifs={gifs} />
         </div>
-        <div className="App-category">
+        <div className='App-category'>
           <TrendingSearches />
         </div>
       </div>
