@@ -1,55 +1,59 @@
-body{
-  background-color: #282c34;
-  overflow-x: hidden;
-}
-
-
 .App {
   text-align: center;
 }
 
+.App-logo {
+  margin: 10px auto;
+  padding: 20px 0;
+  width: 144px;
+}
 
-.App-content {
-  min-height: 100vh;
-  min-width: 100vw;
-  justify-items: center;
-  font-size: calc(10px + 2vmin);
+.App-logo img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.App-title {
   color: white;
 }
 
-a:visited{
-  color: #09f
-}
-
-.Nav-container{
-  color: #09f;
-  min-width: 100vh;
+.App-content {
+  background-color: #121212;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding: 16px;
+  text-align: left;
 }
 
-.App-content > div{
-  margin: auto;
+/*----------*/
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-input{
-  padding: 4px 8px;
-  margin-bottom: 12px;
-  border: 1px solid transparent;  
-  outline: none;
+.App-results {
+  flex-shrink: 2;
 }
 
-button{
-  border: 1px solid transparent;
-  padding: 4px 8px;
-
+.App-category {
+  margin-bottom: 25px;
+  width: 100%;
 }
 
-button:hover{
-  background-color: #09f;
-  border: 1px solid #fff;
-  transition: all .1s cubic-bezier(0.57, 1.04, 0.18, 0.63);
+@media screen and (min-width: 640px){
+  .App-main{
+    flex-direction: initial;
+  }
+
+  .App-category{
+    padding: 0 2em;
+    position: sticky;
+    top: 0;
+    width: 40%;
+  }
 }

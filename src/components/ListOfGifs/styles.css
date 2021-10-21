@@ -1,44 +1,30 @@
-:root{
-  --columns-quantity: 1
+:root {
+  --results-columns: 2;
 }
 
-.ListOfGifs{
-  column-count: var(--columns-quantity);
+.ListOfGifs {
+  column-count: var(--results-columns);
   column-gap: .5em;
+  min-height: 100vh;
 }
 
-.ListOfGifs-item{
-  -webkit-column-break: avoid;
-  page-break-inside: avoid;
-  break-inside: avoid;
+.ListOfGifs-item {
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+  background-color: #eee;
+  display: inline-block;
   width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  object-fit: cover;
-  margin-bottom: .5em;
 }
 
-.ListOfGifs-item small {
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  z-index: 1;  
-}
-@media (min-width: 400px) {
-  :root{
-    --columns-quantity: 2
-  }
-}
 @media (min-width: 600px) {
-  :root{
-    --columns-quantity: 3
-  }
-}
-@media (min-width: 900px) {
-  :root{
-    --columns-quantity: 4
+  :root {
+    --results-columns: 3;
   }
 }
 
-
+@media (min-width: 800px) {
+  :root {
+    --results-columns: 4;
+  }
+}
